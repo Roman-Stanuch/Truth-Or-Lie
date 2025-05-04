@@ -1,0 +1,9 @@
+body {
+    background-image: url('./assets/space.jpg');
+}
+
+#title_bar {
+    font-family: 'Ubuntu', serif;
+    text-align: center;
+    color: white;
+}
