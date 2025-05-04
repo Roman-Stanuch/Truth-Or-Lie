@@ -1,9 +1,72 @@
 body {
     background-image: url('./assets/space.jpg');
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+h2 {
+    font-family: 'Ubuntu', serif;
+    text-align: center;
+    color: white;
 }
 
 #title_bar {
     font-family: 'Ubuntu', serif;
     text-align: center;
     color: white;
+    width: 90vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.stat {
+    font-size: xx-large;
+    width: 17vw;
+    text-align: center;
+    padding-right: 3vw;
+}
+
+#game_image {
+    width: 45vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#scenario_text {
+    font-family: 'Ubuntu', serif;
+    font-size: x-large;
+    color: white;
+    width: 80vw;
+    height: 15vh;
+}
+
+#choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    width: 80vw;
+    height: 30vh;
+}
+
+.choice_button {
+    background-color: black;
+    font-family: 'Ubuntu', serif;
+    text-align: center;
+    color: white;
+    width: 30vw;
+    height: 10vh;
 }
