@@ -23,7 +23,7 @@ function UpdateGame(guiltModify, reputationModify, scenarioInfo, choiceOneText, 
     choiceTwoButton.textContent = choiceTwoText;
     choiceTwoButton.onclick = choiceTwoOutcome;
 
-    gameImage.imageSource = imageSource;
+    gameImage.src = imageSource;
 }
 
 // Returns a random number between 5 and 15
@@ -43,7 +43,7 @@ function Intro() {
         "You are on The Skeld, a ship deep in outer space with the goal of reaching a far away galaxy. Last night, a crewmate was found dead in the electrical room. Paranoia has overcome the ship, and everyone believes that there is an IMPOSTOR aboard...",
         "Continue with tasks",
         "Search for an IMPOSTOR",
-        "assets/default.png",
+        "assets/Intro.png",
         TaskOne,
         InvestigateOne
     );
@@ -53,10 +53,10 @@ function TaskOne() {
     UpdateGame(
         RandomStatModify(),
         RandomStatModify(),
-        "You decide to continue about your day and eject the trash from the ship. Your crewmates appreciate your work, but grow suspicious of the fact that you are ignoring the more pressing issue. After ejecting the trash, you notice an open vent on the wall...",
+        "You decide to continue about your day and eject the trash from the ship. Your crewmates appreciate your work, but grow suspicious of the fact that you are ignoring the more pressing issue. After ejecting the trash, you notice an open vent on the floor...",
         "Investigate the vent",
         "Return to the cafeteria",
-        "assets/default.png",
+        "assets/TaskOne.png",
         InvestigateTwo,
         MeetingOne
     );
@@ -69,7 +69,7 @@ function TaskTwo() {
         "You go to perform your task in electrical, the site of the original murder. You notice a shiny object on the ground and discover that it is a knife. Upon picking up the knife, you hear someone else enter the room. You fear it may be the IMPOSTOR…",
         "Use the knife to eliminate the stranger",
         "Wait to see who entered the room",
-        "assets/default.png",
+        "assets/TaskTwo.png",
         MiscOne,
         MiscTwo
     );
@@ -82,7 +82,7 @@ function InvestigateOne() {
         "You decide to search for evidence of whether or not there is an IMPOSTOR on the ship. Some appreciate your help in getting to the bottom of this, but others are annoyed that they must now do your tasks. While searching the ship, you notice a crewmate acting suspiciously around a vent...",
         "Call a meeting and inform the crew",
         "Ignore the crewmate",
-        "assets/default.png",
+        "assets/InvestigateOne.png",
         MeetingTwo,
         MeetingThree
     );
@@ -95,7 +95,7 @@ function InvestigateTwo() {
         "You look inside the open vent and discover nothing. Upon turning around, a crewmate notices your suspicious action. He immediately calls a meeting, believing you are the IMPOSTOR...",
         "Go to the meeting",
         "You have no other choice",
-        "assets/default.png",
+        "assets/InvestigateTwo.png",
         MeetingFour,
         MeetingFour
     );
@@ -108,7 +108,7 @@ function MiscOne() {
         "In fear, you kill the crewmate before seeing who they are. Upon further inspection, you see that it is the crewmate you had previously accused of being an IMPOSTOR. Another crewmate enters the room and immediately calls an emergency meeting…",
         "Go to the meeting",
         "You have no other choice",
-        "assets/default.png",
+        "assets/MiscOne.png",
         MeetingSeven,
         MeetingSeven
     );
@@ -118,10 +118,10 @@ function MiscTwo() {
     UpdateGame(
         0,
         RandomStatModify(),
-        "Upon closer inspection, you discover that the crewmate is the one you had previously accused of being an IMPOSTOR. He thanks you for revoking your accusation. Another crewmate enters the room and, out of paranoia, calls an emergency meeting, believing that you two are IMPOSTORS. On the way to the meeting, you are considering your options…",
+        "Upon closer inspection, you discover that the crewmate is the one you had previously accused of being an IMPOSTOR. He thanks you for revoking your accusation. Another crewmate enters the room and, out of paranoia, calls an emergency meeting, believing that you two are conspiring IMPOSTORS. On the way to the meeting, you are considering your options…",
         "Make an agreement with the other crewmate that you will both deny being IMPOSTORS",
         "Place the knife on the other crewmate and accuse them of being an IMPOSTOR",
-        "assets/default.png",
+        "assets/MiscTwo.png",
         EndingSeven,
         () => { if (reputationLevel >= 70) EndingEight(); if (reputationLevel < 70) EndingNine(); }
     );
@@ -129,12 +129,12 @@ function MiscTwo() {
 
 function MeetingOne() {
     UpdateGame(
-        -1 * RandomStatModify(),
-        RandomStatModify(),
+        0,
+        0,
         "Upon returning to the cafeteria, you are made aware that one of your crewmates has been accused of being an IMPOSTOR. A meeting is called. The accuser states that he saw the accused in a vent. The accused claims he was only investigating, trying to find an IMPOSTOR. You know the accuser is always complaining about the accused overeating rations on the ship and suspect this may be a ploy to get rid of him…",
         "Tell the group you believe the accuser is making a false accusation",
         "Vote the accused off the ship",
-        "assets/default.png",
+        "assets/MeetingOne.png",
         MeetingFive,
         EndingTen
     );
@@ -143,11 +143,11 @@ function MeetingOne() {
 function MeetingTwo() {
     UpdateGame(
         -1 * RandomStatModify(),
-        RandomStatModify(),
+        -1 * RandomStatModify(),
         "The whole crew is called to the cafeteria, and you tell them what you saw. The accused crewmate claims he was only investigating, trying to find an IMPOSTOR. You suspect they may be telling the truth, but you also know that voting them off the ship will end the hunt and ensure your safety…",
         "Revoke your accusation and continue with your tasks",
         "Falsify more evidence against the crewmate to get them voted off",
-        "assets/default.png",
+        "assets/MeetingTwo.png",
         TaskTwo,
         EndingFourteen
     );
@@ -155,12 +155,12 @@ function MeetingTwo() {
 
 function MeetingThree() {
     UpdateGame(
-        -1 * RandomStatModify(),
+        RandomStatModify(),
         RandomStatModify(),
         "A third crewmate sees you two near the vent and calls a meeting. He states that you two were acting strange near the vent and may both be IMPOSTORS…",
         "Lie and say you saw the other crewmate come out of a vent",
         "Say that you and the other crewmate were only investigating and are not guilty",
-        "assets/default.png",
+        "assets/MeetingThree.png",
         () => { if (reputationLevel >= 70) EndingFifteen(); if (reputationLevel < 70) EndingSixteen(); },
         MeetingSeven
     );
@@ -168,25 +168,25 @@ function MeetingThree() {
 
 function MeetingFour() {
     UpdateGame(
-        -1 * RandomStatModify(),
         RandomStatModify(),
+        0,
         "You are put to trial before the other crewmates. They believe you are the IMPOSTOR because only an IMPOSTOR would go anywhere near a vent. Desperate for a conviction, the crew gives you two options. You can admit to being guilty and be dropped at the nearest planet, or you can deny, but you will be sent out the airlock...",
         "Confess",
         "Deny",
-        "assets/default.png",
+        "assets/MeetingFour.png",
         EndingOne,
-        () => { if (reputationLevel >= 70) EndingTwo(); if (reputationLevel < 70) EndingThree(); }
+        () => { if (reputationLevel >= 60) EndingTwo(); if (reputationLevel < 70) EndingThree(); }
     );
 }
 
 function MeetingFive() {
     UpdateGame(
-        -1 * RandomStatModify(),
+        RandomStatModify(),
         RandomStatModify(),
         "You voice your concerns about the validity of the accusation. This saved the accused crewmate, but suspicion turns to you. The crew demands that you reveal who you believe the IMPOSTOR is. You consider your options…",
         "Accuse an outsider crewmate of being the IMPOSTOR",
         "Take the fall and state that you are the IMPOSTOR, saving everyone else from accusation",
-        "assets/default.png",
+        "assets/MeetingFive.png",
         () => { if (reputationLevel >= 70) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
         EndingThirteen
     );
@@ -194,25 +194,25 @@ function MeetingFive() {
 
 function MeetingSix() {
     UpdateGame(
-        -1 * RandomStatModify(),
+        RandomStatModify(),
         RandomStatModify(),
         "Desperate for a conviction, the crew demands that if none of you are IMPOSTORS, then you must name who the IMPOSTOR is. You are unsure who it is, but must make an accusation if you wish to avoid guilt…",
         "Accuse an outsider vrewmate of being the IMPOSTOR",
         "Take the fall and state that you are the IMPOSTOR, saving everyone else from accusation",
-        "assets/default.png",
-        () => { if (reputationLevel >= 70) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
+        "assets/MeetingSix.png",
+        () => { if (reputationLevel >= 80) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
         EndingThirteen
     );
 }
 
 function MeetingSeven() {
     UpdateGame(
-        -1 * RandomStatModify(),
         RandomStatModify(),
+        0,
         "You are put to trial before the other crewmates. You see two possible options. You can admit to being the IMPOSTOR, even if the murder was an accident, or you can accuse the crewmate you murdered of being the IMPOSTOR once more, potentially avoiding guilt…",
         "Admit",
         "Accuse",
-        "assets/default.png",
+        "assets/MeetingSeven.png",
         EndingFour,
         () => { if (reputationLevel >= 70) EndingFive(); if (reputationLevel < 70) EndingSix(); }
     );
@@ -225,7 +225,7 @@ function EndingOne() {
         "You figure that your best chance at survival is admitting to being an IMPOSTOR. Happy to have resolved the situation, the crew drops you off at a nearby spaceport. You had to lie and will forever be seen by your former crew as an IMPOSTOR, but at least you remain among the living…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingOne.png",
         Intro,
         Intro
     );
@@ -238,7 +238,7 @@ function EndingTwo() {
         "You refuse to admit to being an IMPOSTOR, even if it means death. The more sensible crewmates believe this is going too far, but the majority’s judgement is clouded by paranoia. Upon being sent out the airlock, the unclouded few salute to you. You may be lost in space, but they will remember you as an honorable crewmate…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
@@ -251,7 +251,7 @@ function EndingThree() {
         "You refuse to admit to being an IMPOSTOR, even if it means death. The more sensible crewmates believe this is going too far, and they raise their concerns. Your reputation placates the majority’s desire to convict, and you are spared. Fortunately, an autopsy reveals that the dead crewmate died of an allergic reaction. 0 IMPOSTORS were ever on the ship…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingThree.png",
         Intro,
         Intro
     );
@@ -264,7 +264,7 @@ function EndingFour() {
         "You admit to being the IMPOSTOR, after all, you are guilty of murder. You are swiftly sent out the airlock and forgotten in space. Your reputation may be gone, but at least the victim of your murder will not be falsely remembered as an IMPOSTOR himself…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingFour.png",
         Intro,
         Intro
     );
