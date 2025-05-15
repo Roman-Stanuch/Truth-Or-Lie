@@ -186,7 +186,7 @@ function MeetingFive() {
         "You voice your concerns about the validity of the accusation. This saved the accused crewmate, but suspicion turns to you. The crew demands that you reveal who you believe the IMPOSTOR is. You consider your options…",
         "Accuse an outsider crewmate of being the IMPOSTOR",
         "Take the fall and state that you are the IMPOSTOR, saving everyone else from accusation",
-        "assets/MeetingFive.png",
+        "assets/MeetingFour.png",
         () => { if (reputationLevel >= 70) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
         EndingThirteen
     );
@@ -199,7 +199,7 @@ function MeetingSix() {
         "Desperate for a conviction, the crew demands that if none of you are IMPOSTORS, then you must name who the IMPOSTOR is. You are unsure who it is, but must make an accusation if you wish to avoid guilt…",
         "Accuse an outsider vrewmate of being the IMPOSTOR",
         "Take the fall and state that you are the IMPOSTOR, saving everyone else from accusation",
-        "assets/MeetingSix.png",
+        "assets/MeetingFour.png",
         () => { if (reputationLevel >= 80) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
         EndingThirteen
     );
@@ -264,7 +264,7 @@ function EndingFour() {
         "You admit to being the IMPOSTOR, after all, you are guilty of murder. You are swiftly sent out the airlock and forgotten in space. Your reputation may be gone, but at least the victim of your murder will not be falsely remembered as an IMPOSTOR himself…",
         "Restart Game",
         "Restart Game",
-        "assets/EndingFour.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
@@ -290,7 +290,7 @@ function EndingSix() {
         "You state that the murder was done out of self defense because your victim was in fact the IMPOSTOR. You do not have a great reputation with the crew, and they do not believe your alibi. IMPOSTOR or not, you are a murderer, and you are swiftly sent out the airlock, forgotten in space…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
@@ -303,7 +303,7 @@ function EndingSeven() {
         "You and your fellow crewmate deny being IMPOSTORS. The crew is desperate to find someone to blame, and decide that you two are the most suspicious. Clouded by paranoia, they decide to have you two sent out the airlock. You are both to die, but neither will die a traitor. However, when about to be blasted into space, it is discovered that the victim died of an allergic reaction. You two are saved. There were 0 IMPOSTORS on the ship…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingSeven.png",
         Intro,
         Intro
     );
@@ -316,7 +316,7 @@ function EndingEight() {
         "At the meeting, you reveal the knife you planted on the other crewmate. They deny being the IMPOSTOR, but your reputation exceeds theirs. The crew accepts the knife as undeniable proof that the other crewmate is guilty, and they are promptly sent out the airlock. You saved yourself, but sent an innocent crewmate to their death…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingEight.png",
         Intro,
         Intro
     );
@@ -329,7 +329,7 @@ function EndingNine() {
         "At the meeting, you reveal the knife you planted on the other crewmate. They deny being the IMPOSTOR, stating that they were only preparing a steak. Their reputation exceeds yours, and suspicion turns to you; only an IMPOSTOR would accuse an innocent crewmate of murder. The crew determines that you are guilty, and they promptly send you out the airlock to be forgotten in space…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
@@ -342,7 +342,7 @@ function EndingTen() {
         "The crew decides to vote the accused off the ship. Despite little evidence, paranoia clouds the crew’s judgement. The situation has been resolved, but you can’t help but feel that you sent an innocent crewmate to their death…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTen.png",
         Intro,
         Intro
     );
@@ -355,7 +355,7 @@ function EndingEleven() {
         "You accuse the most solitary crewmate of being the IMPOSTOR. Due to your reputation, the crew believes you without question. Desperate to resolve the situation, the crew ejects the solitary crewmate out the airlock. The situation has been resolved, but you feel immense guilt for sending an innocent crewmate to their death…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTen.png",
         Intro,
         Intro
     );
@@ -368,7 +368,7 @@ function EndingTwelve() {
         "You accuse the most solitary crewmate of being the IMPOSTOR. However, you have a poor reputation among the crew, and the outsider has a good explanation for their innocence. Your lie brings guilt to yourself, and the crew begins to believe that you are the IMPOSTOR. In desperation to resolve the situation, you are swiftly sent out the airlock. You are forgotten in space as a liar…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
@@ -381,7 +381,7 @@ function EndingThirteen() {
         "You state that you are the IMPOSTOR to save everyone else from false accusations. You are to be sent out the airlock, but your reputation makes the crew hesitant to do so. In the crew’s hesitation, it is discovered that the murdered crewmate actually died of an allergic reaction. There were 0 IMPOSTORS on the ship, and everyone is saved from accusation…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingThree.png",
         Intro,
         Intro
     );
@@ -394,7 +394,7 @@ function EndingFourteen() {
         "You lie and tell the crew that you also saw the accused crewmate tampering with the engines. The crew decides to vote them off the ship. Despite only having an accusation from one person, the crew has their judgement clouded by paranoia. The situation has been resolved, but you can’t help but feel that you sent an innocent crewmate to their death…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingEight.png",
         Intro,
         Intro
     );
@@ -407,7 +407,7 @@ function EndingFifteen() {
         "You tell the crew that you saw the other crewmate come out of a vent and that they are the IMPOSTOR. Due to your reputation, the crew believes you without question. Desperate to resolve the situation, the crew ejects the solitary crewmate out the airlock. The situation has been resolved, but you feel immense guilt for sending an innocent crewmate to their death…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTen.png",
         Intro,
         Intro
     );
@@ -420,7 +420,7 @@ function EndingSixteen() {
         "You tell the crew that you saw the other crewmate come out of a vent and that they are the IMPOSTOR. The other crewmate says the same about you. Due to the other crewmate’s superior reputation, the crew believes them without question. Desperate to resolve the situation, the crew ejects you out the airlock. You can’t help but feel that telling the truth would have saved your life…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingTwo.png",
         Intro,
         Intro
     );
