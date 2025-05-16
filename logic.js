@@ -175,7 +175,7 @@ function MeetingFour() {
         "Deny",
         "assets/MeetingFour.png",
         EndingOne,
-        () => { if (reputationLevel >= 60) EndingTwo(); if (reputationLevel < 60) EndingThree(); }
+        EndingTwo
     );
 }
 
