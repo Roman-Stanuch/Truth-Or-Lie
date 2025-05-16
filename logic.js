@@ -277,7 +277,7 @@ function EndingFive() {
         "You state that the murder was done out of self defense because your victim was in fact the IMPOSTOR. Your good reputation among the crew leads them to believe your alibi. You may have resolved the situation and saved yourself from persecution, but you did so at the cost of the reputation of your victim…",
         "Restart Game",
         "Restart Game",
-        "assets/default.png",
+        "assets/EndingFive.png",
         Intro,
         Intro
     );
