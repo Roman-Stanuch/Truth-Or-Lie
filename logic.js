@@ -175,7 +175,7 @@ function MeetingFour() {
         "Deny",
         "assets/MeetingFour.png",
         EndingOne,
-        () => { if (reputationLevel >= 60) EndingTwo(); if (reputationLevel < 70) EndingThree(); }
+        () => { if (reputationLevel >= 60) EndingTwo(); if (reputationLevel < 60) EndingThree(); }
     );
 }
 
@@ -200,7 +200,7 @@ function MeetingSix() {
         "Accuse an outsider vrewmate of being the IMPOSTOR",
         "Take the fall and state that you are the IMPOSTOR, saving everyone else from accusation",
         "assets/MeetingFour.png",
-        () => { if (reputationLevel >= 80) EndingEleven(); if (reputationLevel < 70) EndingTwelve(); },
+        () => { if (reputationLevel >= 80) EndingEleven(); if (reputationLevel < 80) EndingTwelve(); },
         EndingThirteen
     );
 }
